@@ -1,31 +1,34 @@
-words = ["Alaska","Dad"]
+words= ["adsdf","sfd"]
 c = []
-first = "qwertyuiop"
-second = "asdfghjkl"
-third = "zxcvbnm"
+first = "QWERTYUIOPqwertyuiop"
+second = "ASDFGHJKLasdfghjkl"
+third = "ZXCVBNMzxcvbnm"
 for word in words:
-    word = word.lower()
     if word[0] in first:
-        for i in word:
-            if i in first:
-                if i != len(word):
+        for i in range(len(word)):
+            if word[i] in first:
+                if i != len(word)-1:
                     continue
                 else:
                     c.append(word)
+            else:
+                break
     if word[0] in second:
-        for i in enumerate(word):
-            if i in second:
-                if word.index(i) != len(word) - 1:
+        for i in range(len(word)):
+            if word[i] in second:
+                if i != len(word)-1:
                     continue
                 else:
                     c.append(word)
+            else:
+                break
     if word[0] in third:
-        for i in word:
-            if i in third:
-                if i != len(word):
+        for i in range(len(word)):
+            if word[i] in third:
+                if i != len(word)-1:
                     continue
                 else:
                     c.append(word)
+        else:
+            break
 print(c)
-    
-                
