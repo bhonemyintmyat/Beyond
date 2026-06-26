@@ -1,8 +1,8 @@
 class Solution {
 public:
-    bool isPalindrome(long long x) {
+    bool isPalindrome(int x) {
         long long sum = 0;
-        long long temp = x;
+        int temp = x;
         while (x>0) {
             sum = sum * 10 + (x % 10);
             x /= 10;
